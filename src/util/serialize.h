@@ -34,6 +34,9 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 	#elif defined(__FreeBSD__)
 		#include <sys/endian.h>
 	#else
+		#ifdef __HAIKU__
+		#define _BSD_SOURCE
+		#endif
 		#include <endian.h>
 	#endif
 #endif
